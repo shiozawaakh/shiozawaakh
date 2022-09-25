@@ -1,5 +1,16 @@
 <!-- <p>members works!</p> -->
 <!-- {{ member }} -->
+<h2>Member List</h2>
+<ul class="members">
+  <li *ngFor="let member of members">
+    <span class="badge">{{ member.id }}</span> {{member.name}}
+  </li>
+</ul>
+
 <h2>{{ member.name}}</h2>
 <div><span>Id: </span>{{member.id}}</div>
-<div><span>Name: </span>{{member.name}}</div>
+<div>
+  <label>Name:
+    <input type="text" [(ngModel)]="member.name" placeholder="Name">
+  </label>
+</div>
